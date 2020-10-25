@@ -8,19 +8,22 @@ local cfg = CreateFrame("Frame")
 -- CONFIG
 -----------------------------
 
+local unitX = 282
+local unitY = 140
+
 --unitframes
     cfg.unitframeWidth = 250
     cfg.unitframeScale = 1 -- Keep between 1 and 1.25 to have a good result, 1 is default
     cfg.showPortraits = true
     cfg.alwaysShowArtifactXPBar = true
 --player
-    cfg.playerX = -180 -- x-coordinate of the player frame
-    cfg.playerY = 325 -- y-coordinate of the player frame
+    cfg.playerX = -unitX -- x-coordinate of the player frame
+    cfg.playerY = unitY -- y-coordinate of the player frame
     cfg.showExperienceBar = true
     cfg.showArtifactPowerBar = true
 --target
-    cfg.targetX = 180 -- x-coordinate of the target frame
-    cfg.targetY = 325 -- y-coordinate of the target frame
+    cfg.targetX = unitX -- x-coordinate of the target frame
+    cfg.targetY = unitY -- y-coordinate of the target frame
 --boss
     cfg.bossX = 325 -- x-offset of boss frames, from side
     cfg.bossY = 350 -- y-offset of boss frames, from center, this is for the first bossframe, additional frames will grow upwards (75px each)
@@ -30,8 +33,8 @@ local cfg = CreateFrame("Frame")
 --auras
     cfg.playerAuras = false -- show player buffs and debuffs, disables Blizzard buff bar
     cfg.AltPowerBarPlayer = false --show altpowerbar on player frame, false = blizzard standard
-    cfg.targetBuffs = true -- show target buff frame
-    cfg.targetDebuffs = true -- show target debuff frame
+    cfg.targetBuffs = false -- show target buff frame
+    cfg.targetDebuffs = false -- show target debuff frame
     cfg.totBuffs = false -- show target-of-target buffs (only one can be active)
     cfg.totDebuffs = true -- show target-of-target debuffs (only one can be active)
     cfg.focusBuffs = false -- show focus buffs (only one can be active)
@@ -58,7 +61,7 @@ local cfg = CreateFrame("Frame")
     cfg.targetCastBarWidth = 200
     cfg.targetCastBarHeight = 25
 --raid&party frames
-    cfg.showRaid = true -- show raid frames
+    cfg.showRaid = false -- show raid frames
     cfg.raidStyle = "BARS" -- "RECT" or "BARS"
     cfg.raidShowSolo = true -- show raid frames even when solo
     cfg.raidHideMissingHealth = true
