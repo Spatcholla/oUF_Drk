@@ -92,11 +92,7 @@ oUF.colors.honor = {
 local function IsPlayerMaxLevel()
 	local maxLevel = GetRestrictedAccountData()
 	if(maxLevel == 0) then
-<<<<<<< HEAD
-		maxLevel = MAX_PLAYER_LEVEL_TABLE[GetExpansionLevel()]
-=======
 		maxLevel = GetMaxLevelForPlayerExpansion()
->>>>>>> e9c5e54e24a2bc51dbf994dbdcb84c0bb07ecaa7
 	end
 
 	return maxLevel == UnitLevel('player')
@@ -107,11 +103,7 @@ local function IsPlayerMaxHonorLevel()
 end
 
 local function ShouldShowHonor()
-<<<<<<< HEAD
-	return IsPlayerMaxLevel() and (IsWatchingHonorAsXP() or InActiveBattlefield() or IsInActiveWorldPVP())
-=======
 	return IsPlayerMaxLevel() and (IsWatchingHonorAsXP() or C_PvP.IsActiveBattlefield() or IsInActiveWorldPVP())
->>>>>>> e9c5e54e24a2bc51dbf994dbdcb84c0bb07ecaa7
 end
 
 --[[ Tags:header
